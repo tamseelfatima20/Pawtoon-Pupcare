@@ -127,10 +127,11 @@
 }
 
 .list-item {
-  font-size: 1.8rem;
+  font-size: 1.7rem;
   display: flex;
   align-items: center;
   gap: 1.6rem;
+  line-height: 1.2;
 }
 
 .list-icon {

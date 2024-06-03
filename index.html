@@ -3,9 +3,21 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Pawtoon is here to ensure that every
+    street dog has access to the food they need to thrive. Collecting
+    donations for dog food and distributing them to areas where these
+    pups are most in need & spreading love one meal at a time."
+    />
+
+    <link rel="icon" href="image/favicon.png" />
+    <link rel="apple-touch-icon" href="image/apple-touch-icon.png" />
+    <link rel="manifest" href="manifest.webmanifest" />
 
     <link rel="stylesheet" href="css/general.css" />
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/queries.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -21,8 +33,9 @@
       nomodule
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
     ></script>
+    <script defer src="js/script.js"></script>
 
-    <title>Pawtoon Pupcare</title>
+    <title>Pawtoon Pupcare &mdash; Dog's best friend</title>
   </head>
   <body>
     <header class="header">
@@ -35,13 +48,22 @@
       </a>
       <nav class="main-nav">
         <ul class="main-nav-list">
-          <li><a class="main-nav-link" href="#">How it works</a></li>
-          <li><a class="main-nav-link" href="#">Buy from us</a></li>
-          <li><a class="main-nav-link" href="#">Testimonials</a></li>
-          <li><a class="main-nav-link" href="#">Pricing</a></li>
-          <li><a class="main-nav-link nav-cta" href="#">Free Dog Meal</a></li>
+          <li><a class="main-nav-link" href="#how">How it works</a></li>
+          <li><a class="main-nav-link" href="#meals">Buy from us</a></li>
+          <li>
+            <a class="main-nav-link" href="#testimonials">Testimonials</a>
+          </li>
+          <li><a class="main-nav-link" href="#pricing">Pricing</a></li>
+          <li>
+            <a class="main-nav-link nav-cta" href="#cta">Free Dog Meal</a>
+          </li>
         </ul>
       </nav>
+
+      <button class="btn-mobile-nav">
+        <ion-icon class="icon-mobile-nav" name="menu-outline"></ion-icon>
+        <ion-icon class="icon-mobile-nav" name="close-outline"></ion-icon>
+      </button>
     </header>
 
     <main>
@@ -58,10 +80,10 @@
               pups are most in need & spreading love one meal at a time.
             </p>
 
-            <a href="#" class="btn btn--full margin-right-sm"
+            <a href="#cta" class="btn btn--full margin-right-sm"
               >Ready to be a pawtoon hero?
             </a>
-            <a href="#" class="btn btn--outline">Learn more &darr;</a>
+            <a href="#how" class="btn btn--outline">Learn more &darr;</a>
 
             <div class="delivered-meals">
               <div class="delivered-imgs">
@@ -97,12 +119,16 @@
           </div>
 
           <div class="hero-img-box">
-            <img
-              src="image/hero1.png"
-              class="hero-img"
-              alt="small pups sleeping,
+            <picture>
+              <source srcset="image/hero1.webp" type="image/webp" />
+              <source srcset="image/hero1.png" type="image/png" />
+              <img
+                src="image/hero1.webp"
+                class="hero-img"
+                alt="small pups sleeping,
                     a cute indie dog face, and a woman playing with a puppy"
-            />
+              />
+            </picture>
           </div>
         </div>
       </section>
@@ -120,7 +146,7 @@
         </div>
       </section>
 
-      <section class="section-how">
+      <section class="section-how" id="how">
         <div class="container">
           <span class="subheading">How it works?</span>
           <h2 class="heading-secondary">Pawsitive Impact in 3 simple steps</h2>
@@ -198,7 +224,7 @@
           </div>
         </div>
       </section>
-      <section class="section-meals">
+      <section class="section-meals" id="meals">
         <div class="container center-text">
           <span class="subheading">Buy from us</span>
           <h2 class="heading-secondary">
@@ -338,7 +364,7 @@
           <a href="#" class="link">See all meals &rarr;</a>
         </div>
       </section>
-      <section class="section-testimonials">
+      <section class="section-testimonials" id="testimonials">
         <div class="testimonials-container">
           <span class="subheading">Testimonials</span>
           <h2 class="heading-secondary">
@@ -354,8 +380,7 @@
               />
               <blockquote class="testimonial-text">
                 Pawtoon is incredible! Their dedication to feeding stray dogs is
-                inspiring. My donation was simple, and I love knowing I'm making
-                a difference!
+                inspiring.I love knowing I'm making a difference!
               </blockquote>
               <p class="testimonial-name">&mdash; Anjali S.</p>
             </figure>
@@ -489,7 +514,7 @@
         </div>
       </section>
 
-      <section class="section-pricing">
+      <section class="section-pricing" id="pricing">
         <div class="container">
           <span class="subheading">Pricing - Choose your Impact Strategy</span>
           <h2 class="heading-secondary">
@@ -507,21 +532,22 @@
                   name="pricetag"
                 ></ion-icon>
               </p>
-              <p class="plan-text">per month. Feeds 5 stray dogs for a day.</p>
+              <p class="plan-text">
+                per month. Feeds healthy food to 5 stray dogs for a day.
+              </p>
             </header>
             <ul class="list">
-              <li><br /><br /></li>
               <li class="list-item">
                 <ion-icon class="list-icon" name="checkmark-outline"></ion-icon>
-                <span>Vitamin supplements</span>
+                <span>Vitamin supplements and add-ons</span>
               </li>
               <li class="list-item">
                 <ion-icon class="list-icon" name="checkmark-outline"></ion-icon>
-                <span>Checkups for minor Ailments</span>
+                <span>Basic Checkups for minor Ailments</span>
               </li>
               <li class="list-item">
                 <ion-icon class="list-icon" name="checkmark-outline"></ion-icon>
-                <span>100% money towards the care</span>
+                <span>100% money towards the care.</span>
               </li>
               <li class="list-item">
                 <ion-icon class="list-icon" name="close-outline"></ion-icon>
@@ -618,7 +644,7 @@
         </div>
       </section>
 
-      <section class="section-cta">
+      <section class="section-cta" id="cta">
         <div class="container">
           <div class="cta">
             <div class="cta-text-box">
@@ -629,13 +655,14 @@
                 pause anytime. And the first dog-meal on us!
               </p>
 
-              <form class="cta-form" action="#">
+              <form class="cta-form" name="sign-up" netlify>
                 <div>
                   <label for="full-name">Full name</label>
                   <input
                     id="full-name"
                     type="text"
                     placeholder="Pawlicia"
+                    name="full-name"
                     required
                   />
                 </div>
@@ -646,6 +673,7 @@
                     id="dog-name"
                     type="text"
                     placeholder="Pawpy"
+                    name="pet-name"
                     required
                   />
                 </div>
@@ -656,13 +684,14 @@
                     id="email"
                     type="email"
                     placeholder="buddy@example.com"
+                    name="mail ID"
                     required
                   />
                 </div>
 
                 <div>
                   <label for="select-where">Where did you hear about us?</label>
-                  <select id="select-where" required>
+                  <select id="select-where" name="select-where" required>
                     <option value="">Please choose an option</option>
                     <option value="friends">Friends and Family</option>
                     <option value="youtube">Youtube Video</option>
@@ -735,16 +764,7 @@
           </address>
         </div>
 
-        <div class="nav-col">
-          <p class="footer-heading">Company</p>
-          <ul class="footer-nav">
-            <li><a class="footer-link" href="#">For Business</a></li>
-            <li><a class="footer-link" href="#">Packaging partners</a></li>
-            <li><a class="footer-link" href="#">Careers</a></li>
-          </ul>
-        </div>
-
-        <div class="nav-col">
+        <nav class="nav-col">
           <p class="footer-heading">Account</p>
           <ul class="footer-nav">
             <li><a class="footer-link" href="#">Create Account</a></li>
@@ -752,9 +772,19 @@
             <li><a class="footer-link" href="#">iOS app</a></li>
             <li><a class="footer-link" href="#">Android app</a></li>
           </ul>
-        </div>
+        </nav>
 
-        <div class="nav-col">
+        <nav class="nav-col">
+          <p class="footer-heading">Company</p>
+          <ul class="footer-nav">
+            <li><a class="footer-link" href="#">About Pawtoon</a></li>
+            <li><a class="footer-link" href="#">Packaging partners</a></li>
+            <li><a class="footer-link" href="#">For Business</a></li>
+            <li><a class="footer-link" href="#">Careers</a></li>
+          </ul>
+        </nav>
+
+        <nav class="nav-col">
           <p class="footer-heading">Resources</p>
           <ul class="footer-nav">
             <li>
@@ -765,7 +795,7 @@
             <li><a class="footer-link" href="#">Help center</a></li>
             <li><a class="footer-link" href="#">Privacy and terms</a></li>
           </ul>
-        </div>
+        </nav>
       </div>
     </footer>
   </body>
